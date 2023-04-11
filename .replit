@@ -4,7 +4,7 @@ entrypoint = "pom.xml"
 hidden = ["**/*.class"]
 
 [env]
-SPRING_PROFILES_ACTIVE=prod
+SPRING_PROFILES_ACTIVE="prod"
 
 [packager]
 language = "java"
@@ -20,6 +20,9 @@ start = "jdt-language-server"
 
 [unitTest]
 language = "java"
+
+[nix]
+channel = "stable-22_11"
 
 [debugger]
 support = true
@@ -56,8 +59,8 @@ type = "request"
 
 [debugger.interactive.launchMessage.arguments]
 classPaths = ["."]
-mainClass = "org.springframework.boot.SpringApplication"
+mainClass = "com.replit.Application"
 
 [deployment]
 build = "mvn clean package -Dmaven.test.skip=true"
-run = "java -jar target/*.jar"
+run = "java -jar target/classes/*.jar"
