@@ -2,7 +2,7 @@
 
 # https://nixos.org/manual/nixpkgs/stable/#sec-pkgs-mkShell
 pkgs.mkShell {
-  name = "nix-shell"; # the name of the derivation. default: nix-shell
+  name = "replit-template-for-spring-boot"; # the name of the derivation. default: nix-shell
   packages = []; # Add executable packages to the nix-shell environment. default: []
   inputsFrom = []; # Add build dependencies of the listed derivations to the nix-shell environment. default: []
   shellHook = ''
