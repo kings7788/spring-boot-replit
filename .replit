@@ -68,7 +68,7 @@ command = "launch"
 type = "request"
 
 [debugger.interactive.launchMessage.arguments]
-classPaths = ["."]; # parameter error? got error even if use actual value: (${CLASSPATH//:/})
+classPaths = ["."] # parameter error? got error even if use actual value: (${CLASSPATH//:/})
 mainClass = "com.replit.Application"
 
 [[ports]]
