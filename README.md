@@ -8,3 +8,8 @@ __THIS IS NOT MULTI MODULE PROJECT!__
 
 Install and run.
 
+# troubleshooter
+
+os environment not effect, so javac/java command in compile/run execute error.
+
+you can use "mvn clean package" for compile, and "java -jar target/*.jar" for run.

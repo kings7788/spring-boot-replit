@@ -1,7 +1,9 @@
 # compile/run cannot use the environment variables defined by this file
 compile = "javac -encoding UTF-8 -classpath $CLASSPATH -d target/classes $(find src/main/java -type f -name '*.java')"
 run = "cp -r src/main/resources/* target/classes/ && java -Dfile.encoding=UTF-8 -classpath target/classes:$CLASSPATH:target/dependency/* com.replit.Application"
-entrypoint = "pom.xml"
+# onBoot not function well
+onBoot = "kill 1"
+entrypoint = "README.md"
 hidden = ["**/*.class"]
 
 [env]
@@ -40,6 +42,7 @@ command = "javac -verbose -encoding UTF-8 -classpath .:/run_dir/junit-4.12.jar:$
 [debugger.interactive]
 transport = "localhost:0"
 connectTimeout = 60
+# jdb is jdk native debug tool, java-debug is vscode extension
 startCommand = "java-debug"
 
 [debugger.interactive.initializeMessage]
@@ -65,7 +68,7 @@ command = "launch"
 type = "request"
 
 [debugger.interactive.launchMessage.arguments]
-classPaths = ["."]
+classPaths = ["."]; # parameter error? got error even if use actual value: (${CLASSPATH//:/})
 mainClass = "com.replit.Application"
 
 [[ports]]
@@ -75,4 +78,4 @@ externalPort = 80
 
 [deployment]
 build = "mvn clean package -Dmaven.test.skip=true"
-run = "java -jar target/classes/*.jar"
+run = "java -jar target/*.jar"
