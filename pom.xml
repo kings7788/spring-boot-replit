@@ -47,6 +47,16 @@
     </dependencies>
 
     <build>
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-jar-plugin</artifactId>
+                    <!-- Starting with version 3.1.2, if the JAR file contains module-info.class, this plugin will update the modular descriptor (module-info.class) with additional attributes -->
+                    <version>3.3.0</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
         <plugins>
             <plugin>
                 <groupId>de.qaware.maven</groupId>
