@@ -84,7 +84,7 @@ build = "mvn clean package -Dmaven.test.skip=true"
 run = "java -jar target/*.jar"
 
 [workflows]
-runButton = "Run Spring Boot"
+runButton = "Run Spring Boot MVC"
 
 [[workflows.workflow]]
 name = "Run Spring Boot"
@@ -94,3 +94,12 @@ mode = "sequential"
 [[workflows.workflow.tasks]]
 task = "shell.exec"
 args = "mvn spring-boot:run"
+
+[[workflows.workflow]]
+name = "Run Spring Boot MVC"
+author = 46561066
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "mvn -q -DskipTests spring-boot:run"
