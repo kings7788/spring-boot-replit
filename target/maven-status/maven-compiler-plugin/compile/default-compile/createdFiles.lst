@@ -1,4 +1,5 @@
 com/example/demo/Application.class
+com/example/demo/security/UserAccountDetailsService.class
 com/example/demo/config/SecurityConfig.class
 com/example/demo/user/UserAccount.class
 com/example/demo/user/UserAccountRepository.class
