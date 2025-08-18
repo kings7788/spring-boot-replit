@@ -1,1 +1,3 @@
-com/replit/web/HomeController.class
+com/example/demo/Application.class
+application.properties
+com/example/demo/web/HomeController.class
