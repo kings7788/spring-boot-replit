@@ -82,3 +82,15 @@ externalPort = 80
 [deployment]
 build = "mvn clean package -Dmaven.test.skip=true"
 run = "java -jar target/*.jar"
+
+[workflows]
+runButton = "Run Spring Boot"
+
+[[workflows.workflow]]
+name = "Run Spring Boot"
+author = 46561066
+mode = "sequential"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "mvn spring-boot:run"
