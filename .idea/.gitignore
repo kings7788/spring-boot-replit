@@ -1,0 +1,78 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+# Editor-based HTTP Client requests
+/httpRequests/
+# Datasource local storage ignored files
+/dataSources/
+/dataSources.local.xml
+### Java ###
+*.class
+*.log
+*.ctxt
+*.jar
+*.war
+*.ear
+
+### Spring Boot ###
+# Spring Boot build files
+target/
+build/
+
+# Embedded server logs
+logs/
+*.log
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+### Gradle ###
+.gradle/
+!gradle/wrapper/gradle-wrapper.jar
+.gradle-cache/
+out/
+
+# Gradle build output
+**/build/
+
+# Local Gradle properties
+gradle-app.setting
+gradle.properties
+
+### IntelliJ IDEA ###
+*.iml
+.idea/
+*.ipr
+*.iws
+
+### Eclipse ###
+.project
+.classpath
+.settings/
+
+### VS Code ###
+.vscode/
+
+### Replit specific ###
+.replit
+replit.nix
+.env
+.upm/
+*.repl
+*.replit-run
+*.replit-cache
+*.replit-db
+
+### Misc ###
+# Ignore temporary files
+*.swp
+*.swo
+*.tmp
+*.bak
+*.orig
+
+# Ignore Node.js leftovers (Replit 有時候亂生前端檔案)
+node_modules/
+package-lock.json
+package.json
