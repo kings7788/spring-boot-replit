@@ -102,4 +102,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "mvn -q -DskipTests spring-boot:run"
+args = "nix-shell --run \"mvn -q -DskipTests spring-boot:run\""
