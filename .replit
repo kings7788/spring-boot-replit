@@ -93,7 +93,7 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "mvn spring-boot:run"
+args = "\"$M2_HOME\"/bin/mvn spring-boot:run"
 
 [[workflows.workflow]]
 name = "Run Spring Boot MVC"
@@ -102,4 +102,4 @@ mode = "sequential"
 
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "mvn -q -DskipTests spring-boot:run"
+args = "\"$M2_HOME\"/bin/mvn -q -DskipTests spring-boot:run"
